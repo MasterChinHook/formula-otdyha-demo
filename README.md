@@ -14,7 +14,17 @@ npm run build      # сборка в dist/
 npm run check      # после build: скриншоты 390px и 1440px в screenshots/, проверка консоли и формы
 ```
 
-Каждый push в `main` сам публикует сайт на GitHub Pages (`.github/workflows/deploy.yml`).
+### Публикация
+
+Сейчас сайт публикуется из ветки `gh-pages`. Чтобы обновить его:
+
+```bash
+npm run deploy     # собрать и отправить dist/ в ветку gh-pages
+```
+
+В репозитории также лежит workflow `.github/workflows/deploy.yml` для публикации через GitHub Actions.
+Сейчас он не запускается: аккаунт GitHub заблокирован для Actions из-за проблемы с оплатой.
+Когда оплата будет в порядке: Settings → Pages → Source: **GitHub Actions**. После этого каждый push в `main` будет публиковать сайт сам.
 
 ## Как менять тексты
 
